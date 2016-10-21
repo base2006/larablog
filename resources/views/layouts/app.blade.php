@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-	@include('partials._head')
- 	<body>
-		@include('partials._nav')
+@include('partials._head')
+<body>
+	@include('partials._nav')
 
-	    <div class="container">
-			@include('partials._messages')
+    <div id="app" class="container">
+		@include('partials._messages')
 
-			@yield('content')
+        @yield('content')
 
-			@include('partials._footer')
-	    </div> <!-- /.container -->
+		@include('partials._footer')
+    </div> <!-- /.container -->
 
-		@include('partials._js')
-	</body>
+    <!-- Scripts -->
+	@include('partials._js')
+</body>
 </html>
