@@ -24,3 +24,5 @@ Route::get('blog/{slug}', ['uses' => 'BlogController@getSingle', 'as' => 'blog.s
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('categories', 'CategoryController', ['except' => ['create']]);
