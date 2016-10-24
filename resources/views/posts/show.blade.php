@@ -16,6 +16,11 @@
 				</dl>
 
 				<dl class="dl-horizontal">
+					<label>Category:</label>
+					<p>{{ $post->category->name }}</p>
+				</dl>
+
+				<dl class="dl-horizontal">
 					<label>Created At:</label>
 					<p>{{ $post->created_at->format('j M Y H:i') }}</p>
 				</dl>
