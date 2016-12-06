@@ -26,3 +26,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('categories', 'CategoryController', ['except' => ['create']]);
+
+Route::resource('tags', 'TagController', ['except' => ['create']]);
