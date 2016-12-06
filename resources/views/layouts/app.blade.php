@@ -14,5 +14,6 @@
 
     <!-- Scripts -->
 	@include('partials._js')
+	@yield('scripts')
 </body>
 </html>
