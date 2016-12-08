@@ -14,6 +14,7 @@
 Route::get('/', 'PagesController@getIndex');
 Route::get('about', 'PagesController@getAbout');
 Route::get('contact', 'PagesController@getContact');
+Route::post('contact', 'PagesController@postContact');
 
 Route::resource('posts', 'PostController');
 
@@ -28,3 +29,6 @@ Route::get('/home', 'HomeController@index');
 Route::resource('categories', 'CategoryController', ['except' => ['create']]);
 
 Route::resource('tags', 'TagController', ['except' => ['create']]);
+
+// Comments
+Route::post('comments/{post_id}', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
