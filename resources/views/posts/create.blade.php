@@ -4,6 +4,17 @@
 
 @section('stylesheets')
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+	<script>
+		tinymce.init({
+			selector: 'textarea',
+			plugins: 'link code',
+			menu: {
+				edit: {title: 'Edit', items: 'undo redo | cut, copy, paste'}
+			},
+			// toolbar: 'undo redo | cut, copy, paste'
+		});
+	</script>
 @endsection
 
 @section('content')
