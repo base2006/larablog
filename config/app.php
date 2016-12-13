@@ -167,7 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+	 	Mews\Purifier\PurifierServiceProvider::class,
         //
 
         /*
@@ -228,7 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 		'Form' => Collective\Html\FormFacade::class,
       	'Html' => Collective\Html\HtmlFacade::class,
-
+		'Purifier' => Mews\Purifier\Facades\Purifier::class,
     ],
 
 ];

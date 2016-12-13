@@ -15,7 +15,7 @@
 				<h2>{{ $post->title }}</h2>
 				<h5>Published: {{ $post->created_at->format('j M Y') }}</h5>
 
-				<p>{{ substr($post->body, 0, 300) }}{{ strlen($post->body) > 300 ? '...' : '' }}</p>
+				<p>{{ substr(strip_tags($post->body), 0, 300) }}{{ strlen(strip_tags($post->body)) > 300 ? '...' : '' }}</p>
 				<a href="{{ route('blog.single', $post->slug) }}" class="btn btn-primary">Read More...</a>
 			</div>
 		</div>
